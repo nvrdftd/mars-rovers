@@ -1,6 +1,6 @@
 # Mars Rovers
 
-On a plateau of the Mars, we shall assume that it is not allowed to move beyond the circumference of the plateau and avoid the rovers' falling. This means that whenever a rover tries to leave the grid that is comprised of the coordinates (0, 0) or (Xmax, Ymax), the program should stop it from moving. Also, it is obvious that any rover cannot occupy the same place at the same time, and thus, a rover will stop moving forward if there is another rover in front of it unless it changes its direction.
+On a plateau of the Mars, we shall assume that it is not allowed to move beyond the circumference of the plateau and avoid the rovers' falling. This means that whenever a rover tries to leave the grid that is comprised of the coordinates from (0, 0) to (Xmax, Ymax), the program should stop it from moving. Also, it is obvious that any rover cannot occupy the same place at the same time, and thus, a rover will stop moving forward if there is another rover in front of it unless it changes its direction.
 
 ## Program Execution
 
@@ -15,7 +15,6 @@ The program consists of three main components: **Executor**, **Rover**, and **Gr
 } else if (c == 'R') {
     direct = (direct - 1 + 4) % 4;
 }
-
 ```
 
 ## Build and Run
@@ -25,5 +24,4 @@ Under the unzipped folder, type in the following command.
 
 ```
 cmake . && make && ./build/MarsTest
-
 ```
