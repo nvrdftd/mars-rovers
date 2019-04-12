@@ -16,15 +16,15 @@ namespace mars {
             int getX() const;
             int getY() const;
             int getDirect() const;
-            void updateStatus(int, int, int);
+            void updateStatus(int, int, int, char);
             std::string getStatus() const;
-            void printStatus() const;
             std::string getRoute() const;
-            void printRoute() const;
+            std::string getCmd() const;
         private:
             std::vector<int> mx;
             std::vector<int> my;
             std::vector<int> mdirect;
+            std::vector<char> mCmd;
     };
 }
 

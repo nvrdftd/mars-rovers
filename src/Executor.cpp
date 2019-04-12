@@ -45,7 +45,7 @@ namespace mars {
             } else if (c == 'R') {
                 direct = (direct - 1 + 4) % 4;
             }
-            rvr.updateStatus(x, y, direct);
+            rvr.updateStatus(x, y, direct, c);
         }
 
         // After all the moves and direction changes, update the grid.
@@ -65,7 +65,7 @@ namespace mars {
         std::cout << std::endl;
         std::cout << "Rover List: " << std::endl;
         for (auto rvr: mRovers) {
-            std::cout << rvr.getStatus() << " (" << rvr.getRoute() << ")" << std::endl;
+            std::cout << rvr.getStatus() << " (" << rvr.getRoute() << ", " << rvr.getCmd() << ")" << std::endl;
         }
         std::cout << std::endl;
     }

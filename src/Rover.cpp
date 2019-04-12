@@ -23,11 +23,12 @@ namespace mars {
     {
         return mdirect.back();
     }
-    void Rover::updateStatus(int x, int y, int direct)
+    void Rover::updateStatus(int x, int y, int direct, char c)
     {
         mx.push_back(x);
         my.push_back(y);
         mdirect.push_back(direct);
+        mCmd.push_back(c);
     }
     std::string Rover::getStatus() const
     {
@@ -48,10 +49,6 @@ namespace mars {
                 break;
         }
         return ss.str();
-    }
-    void Rover::printStatus() const
-    {
-        std::cout << getStatus() << std::endl;
     }
     std::string Rover::getRoute() const
     {
@@ -79,8 +76,12 @@ namespace mars {
         }
         return ss.str();
     }
-    void Rover::printRoute() const
+    std::string Rover::getCmd() const
     {
-        std::cout << getRoute() << std::endl;
+        std::string cmd;
+        for (const char c: mCmd) {
+            cmd += c;
+        }
+        return cmd;
     }
 }
