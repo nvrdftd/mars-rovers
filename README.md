@@ -9,6 +9,10 @@ The program consists of three main components: **Executor**, **Rover**, and **Gr
 
 ## Mathematical Approach to Deciding the Next Direction
 
+Assign each direction a number from 0 through 3 counterclockwise as shown in the diagram. We shall notice that instead of 3 + 1 being 4, it should be 0, and that instead of 0 - 1 being -1, it should be 3.
+
+![](https://github.com/nvrdftd/images/blob/master/coordinates.png)
+
 ```
 } else if (c == 'L') {
     direct = (direct + 1) % 4;
