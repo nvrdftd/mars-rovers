@@ -5,6 +5,8 @@
 
 using namespace mars;
 
+
+// Test if a rover can be moved
 class DeadRoverTest: public ::testing::Test {
 
     protected:
@@ -36,6 +38,7 @@ TEST_F(DeadRoverTest, RoverStatus)
     grid.print();
 }
 
+// Test if a rover is not moving
 class StillRoverTest: public ::testing::Test {
 
     protected:
@@ -62,6 +65,7 @@ TEST_F(StillRoverTest, RoverStatus)
     grid.print();
 }
 
+// Test if a rover can move out of the boundaries
 class GridBoundaryTest: public ::testing::Test {
 
     protected:
@@ -91,6 +95,7 @@ TEST_F(GridBoundaryTest, RoverStatus)
     grid.print();
 }
 
+// Test to move two rovers sequentially
 class TwoRoverTest: public ::testing::Test {
 
     protected:
@@ -120,6 +125,7 @@ TEST_F(TwoRoverTest, RoverStatus)
     grid.print();
 }
 
+// Test that rovers cannot occupy the same place at the same time
 class ConflictTest: public ::testing::Test {
 
     protected:
@@ -153,6 +159,7 @@ TEST_F(ConflictTest, RoverStatus)
     grid.print();
 }
 
+// Test to add rovers from the same location, where each one of them ends up in a different place
 class SameStartTest: public ::testing::Test {
 
     protected:
